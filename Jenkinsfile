@@ -1,7 +1,7 @@
 def branch = "main"
 def remote = "origin"
 def dir = "~/wayshub-frontend"
-def server = "anba@anba.studentdumbways.my.id"
+def server = "anba@103.189.235.54"
 def credi = "appserver"
  
 pipeline {
