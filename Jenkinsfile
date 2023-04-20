@@ -47,5 +47,22 @@ pipeline {
 
                       }
               }
+
+	stage ('docker push'){
+                        steps{
+                                sshagent ([credi]){
+                                        sh """ssh -o StrictHostKeyChecking=no ${server} << EOF
+                                        cd ${dir}
+					docker tag wayshub-fe:latest bonbonz000/wayshub-frontend:latest
+                                        docker push bonbonz000/wayshub-frontend:latest
+					exit
+                                        EOF"""
+                              }
+
+                      }
+              }
+
+
+
 	}
 }
