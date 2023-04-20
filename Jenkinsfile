@@ -53,8 +53,8 @@ pipeline {
                                 sshagent ([credi]){
                                         sh """ssh -o StrictHostKeyChecking=no ${server} << EOF
                                         cd ${dir}
-					docker tag wayshub-fe:latest bonbonz000/wayshub-frontend:latest
-                                        docker push bonbonz000/wayshub-frontend:latest
+					docker tag wayshub-fe:latest angellaviory/wayshub-frontend:latest
+                                        docker push angellaviory/wayshub-frontend:latest
 					exit
                                         EOF"""
                               }
